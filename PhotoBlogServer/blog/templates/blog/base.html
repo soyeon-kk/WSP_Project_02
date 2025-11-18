@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web Service Programming blog</title>
+  {% load static %}
+  <!-- 폰트 추가 -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- 캐시 무효화를 위해 v 파라미터 추가 -->
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}?v=20251101-1">
+</head>
+<body>
+  <header class="page-header neu">
+    <h1><a href="/">Web Service Programming Blog</a></h1>
+    <nav><a href="{% url 'post_new' %}" class="btn">＋ 새 글 작성</a></nav>
+  </header>
+
+  <main class="content container">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

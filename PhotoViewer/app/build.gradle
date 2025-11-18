@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.photoviewer'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.photoviewer"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.11.0'
+
+    // ── 네트워킹: OkHttp 하나만 사용 (중복 제거)
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
+    // (선택) Picasso 계속 쓸 거면 유지, 아니면 제거해도 됨
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // (선택) Volley 안 쓰면 제거 가능
+    implementation 'com.android.volley:volley:1.2.1'
+
+    // ── Glide (이미지 로딩)
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+}

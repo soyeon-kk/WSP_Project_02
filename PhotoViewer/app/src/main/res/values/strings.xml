@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PhotoViewer</string>
+
+    <!-- 게시글 관련 -->
+    <string name="post_title">제목</string>
+    <string name="post_date">날짜</string>
+    <string name="post_image_desc">게시글 이미지 미리보기</string>
+
+    <!-- 버튼 -->
+    <string name="btn_edit">수정</string>
+    <string name="btn_delete">삭제</string>
+    <string name="btn_save">수정 완료</string>
+    <string name="btn_cancel">취소</string>
+    <string name="btn_submit">등록</string>
+
+    <!-- 입력 힌트 -->
+    <string name="hint_title">제목</string>
+    <string name="hint_body">본문 내용</string>
+    <string name="hint_image">이미지 URL (선택)</string>
+
+    <!-- 기타 -->
+    <string name="no_image">이미지가 없습니다</string>
+    <string name="btn_choose_image">이미지 선택</string>
+
+</resources>

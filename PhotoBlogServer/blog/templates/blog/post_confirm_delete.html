@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="delete-card">
+  <h2 style="margin-bottom: 20px;">정말 "{{ post.title }}" 글을 삭제하시겠습니까?</h2>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger" style="background: #ff4d4f">삭제</button>
+    <a href="{% url 'post_detail' pk=post.pk %}" class="btn cancel" style="background: #b2aeca">취소</a>
+  </form>
+</div>
+{% endblock %}

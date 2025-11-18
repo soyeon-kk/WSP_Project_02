@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Environment
+env/
+venv/
+myvenv/
+*.env
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Django (있는 경우)
+staticfiles/
+media/
+db.sqlite3
+
+# 기타
+*.log
+blog/migrations/0005_alter_post_image.py

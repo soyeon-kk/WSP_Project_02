@@ -1,0 +1,53 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+  <div class="form-container">
+    <h2>새 글 작성 / 수정</h2>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <p>
+        {{ form.author.label_tag }}
+        {{ form.author }}
+      </p>
+
+      <p>
+        {{ form.title.label_tag }}
+        {{ form.title }}
+      </p>
+
+      <p>
+        {{ form.text.label_tag }}
+        {{ form.text }}
+      </p>
+
+      <div class="file-field">
+        <label class="file-upload-label" for="id_image">이미지 선택</label>
+        <span id="file-chosen">선택된 파일 없음</span>
+        {{ form.image }}
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="btn">저장</button>
+
+        {% if post and post.pk %}
+          <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-secondary" style="background: #b2aeca">취소</a>
+        {% else %}
+          <a href="{% url 'post_list' %}" class="btn btn-secondary" style="background: #b2aeca">취소</a>
+        {% endif %}
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById("id_image");
+    const fileChosen = document.getElementById("file-chosen");
+    const label = document.querySelector(".file-upload-label");
+
+    label.addEventListener("click", () => fileInput.click());
+    fileInput.addEventListener("change", () => {
+      fileChosen.textContent = fileInput.files.length
+        ? fileInput.files[0].name
+        : "선택된 파일 없음";
+    });
+  </script>
+{% endblock %}

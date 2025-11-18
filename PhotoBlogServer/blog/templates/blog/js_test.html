@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+  <h1>JS Test Page</h1>
+  <button id="btn">Click me</button>
+  <script>
+    document.getElementById('btn').addEventListener('click', () => {
+      alert('JS 연결 테스트 성공!');
+    });
+  </script>
+{% endblock %}

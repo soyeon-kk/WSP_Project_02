@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 기존 색상 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- 새로 추가 -->
+    <color name="purple_500">#4B70E2</color>   <!-- 메인 버튼 색 -->
+    <color name="gray">#A0A5A8</color>        <!-- 취소 버튼 색 -->
+</resources>

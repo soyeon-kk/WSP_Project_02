@@ -1,0 +1,35 @@
+# Android Studio / Gradle
+.idea/
+*.iml
+.gradle/
+local.properties
+.cxx/
+.externalNativeBuild/
+.gradle/
+**/build/
+app/build/
+
+# Android generated / outputs
+navigation/
+*.apk
+*.aab
+output.json
+app/release/output-metadata.json
+
+# Lint / reports
+app/lint-results*.html
+app/lint-results*.xml
+
+# Logs / captures
+captures/
+*.log
+*.hprof
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Keystores
+*.jks
+*.keystore
+*.pem
